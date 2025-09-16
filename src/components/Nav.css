@@ -1,21 +1,7 @@
 body{
     border-right: line 50px darkslategray;
 }
-.vnav{
-    width: 200px;
-    height: 30px;
-    list-style: none;
-    color: black;
-    border-radius: 20px;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    border: 5px solid darkslategray;
-}
-.vnav.open{
-    color: White;
-    background:darkslategray;
-}
+
 .verticalNav{
     z-index: 1000;
     position: fixed;
@@ -36,7 +22,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
 }
-.overv{
+.vnav,.overv,.mycom{
     width: 200px;
     height: 30px;
     list-style: none;
@@ -47,7 +33,7 @@ body{
     color:black;
     border: 5px solid darkslategray;
 }
-.overv.open{
+.overv.open,.mycom.open,.vnav.open{
      color: White;
     background:darkslategray;
 }

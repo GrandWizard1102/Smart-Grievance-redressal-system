@@ -1,7 +1,7 @@
 import './subcomp.css'
 const SubComplain=()=>{
     return(
-        <>
+        <form>
         <h1 style={{textAlign:"center",color:"darkslategray"}}>Submit complaint</h1>
         <div id='subcol'>
            <div id="grid-item">
@@ -29,10 +29,19 @@ const SubComplain=()=>{
             </div>
             <div id="grid-item">
             <h3 for="img">Photo Upload</h3>
-            <input type="file" id="img" name="img" accept='image/*' required/>
+             <div id="image">
+                <input type="file" id="img" name="img" accept='image/*' required/>
+                <div id="imgtips">
+                    <label style={{textAlign:"center",fontSize:"20px"}}>Photo Tips</label>
+                    <li>Take clear, well-lit photos</li>
+                    <li>Show the issue from multiple angles</li>
+                    <li>Include context (street signs, buildings)</li>
+                </div>
+             </div>
             </div>
         </div>
-        </>
+        <button id="submitComplaint" type='Submit'>Submit Complaint</button>
+        </form>
     )
 }
 export default SubComplain;

@@ -21,6 +21,7 @@ function App() {
     const[navi,setnavi]=useState(true);
     const [Overview,setoverview]=useState(true);
     const [scomp,setscomp]=useState(false);
+    const [mycomp,setmycomp]=useState(false);
 
       const liStyle={
           textAlign:"center",
@@ -62,7 +63,7 @@ function App() {
           </ul>
           <button style={btStyle} className="Submit" onClick={()=>{setlogin(!login)}}>{userid}</button>
     </nav>
-    {navi && <Nav setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
+    {navi && <Nav mycomp={mycomp} setmycomp={setmycomp} setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
     <div className={`Body${navi? "Body11":""}`}>
     {/*<Body cl1="Raise a Complaint" cl2="Check Status"/>
     //<Body cl1="Recent Activites" cl2="Others" />*/}
