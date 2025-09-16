@@ -3,12 +3,12 @@ import './subcomp.css'
 const SubComplain=()=>{
     return(
         <form>
-        <h1 style={{textAlign:"center",color:"darkslategray"}}>Submit complaint</h1>
+        <h1 style={{textAlign:"center",color:Color.white,margin:"10px"}}>Submit complaint</h1>
         <div id='subcol'>
-           <div id="grid-item" style={{backgroundColor: Color.secondary}}>
-            <h3>Recent community Issues</h3>
+           <div id="grid-item" style={{backgroundColor: Color.primary}}>
+            <h3 style={{color:"white"}}>Recent community Issues</h3>
             </div>
-            <div id="complaintinput" style={{backgroundColor: Color.secondary}}>
+            <div id="complaintinput" style={{backgroundColor: Color.primary}}>
                 <form id="compdet">
                     <h3>Issue details</h3>
                     <h4>Issue title*</h4>
@@ -28,11 +28,11 @@ const SubComplain=()=>{
                     <textarea id="message" type="text" name="message" rows="5" cols="40" placeholder='Brief description here' />
                 </form>
             </div>
-            <div id="grid-item" style={{backgroundColor: Color.secondary}}>
-            <h3 for="img">Photo Upload</h3>
+            <div id="grid-item" style={{backgroundColor: Color.primary}}>
+            <h3 for="img" style={{color:"white"}}>Photo Upload</h3>
              <div id="image">
-                <input type="file" style={{border:`dotted 2px ${Color.primary}`}} id="img" name="img" accept='image/*' required/>
-                <div id="imgtips" style={{border:`dotted 2px ${Color.primary}`,color:"Blue"}}>
+                <input type="file" style={{border:`dotted 2px ${Color.secondary}`}} id="img" name="img" accept='image/*' required/>
+                <div id="imgtips" style={{border:`dotted 2px ${Color.secondary}`,color:Color.secondary}}>
                     <label style={{textAlign:"center",fontSize:"20px"}}>Photo Tips</label>
                     <li>Take clear, well-lit photos</li>
                     <li>Show the issue from multiple angles</li>

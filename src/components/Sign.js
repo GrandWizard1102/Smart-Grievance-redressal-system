@@ -16,7 +16,7 @@ const Sign=({ userdata ,loginset})=>{
         }
     }
     return(
-        <form className="container" onSubmit={handlesubmit} style={{border: `5px solid ${Color.primary}`}}>
+        <form className="container" onSubmit={handlesubmit} style={{backgroundColor:Color.primary}}>
             <h2>User id:</h2>
             <input id="userid" type="text" placeholder="Enter new user id" required/>
             <h2>Password:</h2>
@@ -24,7 +24,7 @@ const Sign=({ userdata ,loginset})=>{
             <h2>Confirm password:</h2>
             <input type="password" id="password2" placeholder="Re-enter password" required/>
             <br/>
-            <button id="submit" style={{color:Color.secondary,backgroundColor:Color.tertiary}}> Submit</button>
+            <button id="submit" style={{color:Color.white,backgroundColor:Color.secondary}}> Submit</button>
         </form>
     )
 }

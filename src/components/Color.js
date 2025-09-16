@@ -1,8 +1,8 @@
 const Color={
-    primary:"#2E6F40",
-    secondary:"#CFFFDC",
-    tertiary:"#68BA7F",
-    supreme:"#253D2C",
-    white:"white",
+    primary:"#8686AC",
+    secondary:"white",
+    tertiary:"#88BDF2",
+    supreme:"#384959",
+    white:"#505081",
 }
 export default Color;

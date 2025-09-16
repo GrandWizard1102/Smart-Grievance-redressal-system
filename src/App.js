@@ -12,7 +12,7 @@ import Color from './components/Color'
 import OverView from './components/OverView';
 function Header(props){
   const hStyle={
-      color:Color.primary,
+      color:Color.white,
       textAlign:"center",
   }
   return <h1 style={hStyle}>Hi! {props.title}</h1>
@@ -40,6 +40,7 @@ function App() {
           height:"50px",
           flex:"0 1 auto",
           borderRadius:"25px",
+          borderWidth:"0",
           cursor:"pointer",
           fontSize:"100%",
           marginLeft: "auto",

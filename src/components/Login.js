@@ -20,16 +20,16 @@ function Login({ userdata ,loginset}){
 
     const [sign,setsign]=useState(false);
     return(
-       sign?<Sign userdata={userdata} loginset={loginset}/>:<><form className="container" style={{border: `5px solid ${Color.primary}`,backgroundColor: Color.secondary}} onSubmit={handlesubmit}>
+       sign?<Sign userdata={userdata} loginset={loginset}/>:<><form className="container" style={{backgroundColor: Color.primary}} onSubmit={handlesubmit}>
             <h2>User id:</h2>
             <input id="userid" type="text" placeholder='Enter user id'  onChange={(e)=>setuserid(e.target.value)}/>
             <h2>password:</h2>
             <input type="password" id="password" placeholder='Enter password'  onChange={(e)=>setpass(e.target.value)}/>
             <br/>
-            <button id="submit" style={{backgroundColor:Color.tertiary,color: Color.secondary}}> Submit</button>
+            <button id="submit" style={{backgroundColor:Color.secondary,color: Color.white}}> Submit</button>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                 <h4 style={{color:"gray"}}>Don't you have an account?</h4>
-                 <span className='sign' onClick={()=>{setsign(true)}} style={{color:Color.tertiary}}>signup</span>
+                 <h4 style={{color:Color.supreme}}>Don't you have an account?</h4>
+                 <span className='sign' onClick={()=>{setsign(true)}} style={{color:Color.secondary}}>signup</span>
             </div>
         </form>
         </>

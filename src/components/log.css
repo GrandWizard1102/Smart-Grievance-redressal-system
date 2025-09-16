@@ -9,6 +9,7 @@ body{
 }
 h2
 {
+   color: white;
    margin-left: 10%;
 }
 #submit{
@@ -16,6 +17,7 @@ h2
     height: 40px;
     width: 70px;
     border-radius: 20px;
+    border-width: 0;
     margin-left: 30%;
 }
 #sign{
@@ -28,9 +30,10 @@ h2
     margin-left:15%;
     height: 30px;
     size: 50px;
-    border-radius: 30px;
-    padding:10px;
+    border-radius: 20px;
+    padding-left:20px;
     font-size: medium;
+    border-width: 0;
 }
 .sign{
     text-decoration: underline;
