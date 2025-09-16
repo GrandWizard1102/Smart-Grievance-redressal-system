@@ -5,7 +5,6 @@ body{
 .verticalNav{
     z-index: 1000;
     position: fixed;
-    background-color: whitesmoke;
     height: 100%;
 }
 .logout{
@@ -17,8 +16,6 @@ body{
     margin: auto;
     margin-top: 330px;
     border: 3px solid;
-    background:darkslategray;
-    color: white;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -31,9 +28,4 @@ body{
     text-align: center;
     padding: 10px;
     color:black;
-    border: 5px solid darkslategray;
-}
-.overv.open,.mycom.open,.vnav.open{
-     color: White;
-    background:darkslategray;
 }

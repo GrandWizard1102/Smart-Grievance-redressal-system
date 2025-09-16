@@ -1,4 +1,5 @@
 import './App.css';
+import color from './components/Color'
 import Login from  './components/Login';
 //import Body from './components/Body';
 import Nav from './components/Nav';
@@ -6,11 +7,12 @@ import SubComplain from './components/SubComplain';
 //import Logcontext from './components/logcontext';
 import { useState } from 'react';
 import { Link, } from 'react-router-dom';
+import Color from './components/Color'
 
 import OverView from './components/OverView';
 function Header(props){
   const hStyle={
-      color:"Darkslategray",
+      color:Color.primary,
       textAlign:"center",
   }
   return <h1 style={hStyle}>Hi! {props.title}</h1>
@@ -28,11 +30,11 @@ function App() {
           margin:"50px",
           fontSize:"150%",
           textDecoration:"none",
-          color:"white",
+          color:Color.secondary,
       }
       const btStyle={
-          background:"White",
-          color:"darkslategray",
+          background:Color.secondary,
+          color:Color.primary,
           width:"5%",
           marginTop:".5%",
           height:"50px",
@@ -50,13 +52,13 @@ function App() {
     {login ? 
     <Login userdata={setuserid} loginset={setlogin}/>: 
     <>
-    <nav id="topbar">
+    <nav id="topbar" style={{background:color.primary,}}>
           <div className={`hamburger ${navi?"navi":""}`} onClick={()=>{setnavi(!navi)}}>
-            <div className='line'></div>
-            <div className='line'></div>
-            <div className='line'></div>
+            <div className='line' style={{background:color.secondary}}></div>
+            <div className='line'style={{background:color.secondary}}></div>
+            <div className='line' style={{background:color.secondary}}></div>
           </div>
-          <ul id="ulist">
+          <ul id="ulist" style={{color:color.secondary}}>
               <li><Link to='/' style={liStyle}>Home</Link></li>
               <li><Link to='/Ward-Details' style={liStyle}>Ward Details</Link></li>
               <li><Link to='/Contacts'  style={liStyle}>Contacts</Link></li>

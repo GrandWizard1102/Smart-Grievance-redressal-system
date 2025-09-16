@@ -1,7 +1,8 @@
+import Color from './Color'
 const OverHeader=({title})=>{
     const hStyle={
-        backgroundColor:"darkslategray",
-        color:"white",
+        backgroundColor:Color.primary,
+        color:Color.secondary,
         width:"50%",
         marginLeft:"30%",
         margin:"20px",

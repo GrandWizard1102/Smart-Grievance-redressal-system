@@ -21,7 +21,6 @@
 }
 #subcol div{
      padding :20px;
-     background-color: rgb(197, 215, 222);
      border-radius: 20px;
 }
 #image{
@@ -30,21 +29,15 @@
 }
 #img{
     height: 10%;
-    border:dotted 2px darkslategray;
     padding:50px;
     border-radius: 20px;
 }
 #imgtips{
-    color:blue;
     height: 80px;
-    border:dotted 2px darkslategray;
     padding:90px;
     border-radius: 20px;
-
 }
 #submitComplaint{
-    background-color: darkslategray;
-    color:white;
     border-radius: 20px;
     padding: 10px;
     margin-left: 90%;

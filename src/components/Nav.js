@@ -1,14 +1,15 @@
 //import { useState } from 'react';
+import Color from './Color';
 import'./Nav.css'
 function Nav({mycomp,setmycomp,setnavi,scomp,setscomp,Overview,setoverview,login,loginset}){
     return(
         <>
-            <div className='verticalNav'>
-                <li className={`overv ${Overview ? "open" : ""}`}  onClick={()=>{setoverview(!Overview);setscomp(false);setmycomp(false)}}>Overview</li>
-                <li className={`vnav ${scomp ? "open" : ""}`}  onClick={()=>{setscomp(!scomp);setoverview(false);setmycomp(false)}}>Submit Complaints</li>
-                <li className={`mycom ${mycomp ? "open" : ""}`} onClick={()=>{setmycomp(!mycomp);setoverview(false);setscomp(false)}}>My Complaints</li>
-                <li className="vnav">Analytics</li>
-                <li className='logout' onClick={()=>{loginset(!login);setnavi(false)}}>log out</li>
+            <div className='verticalNav' style={{backgroundColor:Color.secondary}}>
+                <li className={`overv ${Overview ? "open" : ""}`} style={{border: `5px solid ${Color.primary}`,...(Overview?{color:Color.secondary,background:Color.primary} : {})}} onClick={()=>{setoverview(!Overview);setscomp(false);setmycomp(false)}}>Overview</li>
+                <li className={`vnav ${scomp ? "open" : ""}`} style={{border: `5px solid ${Color.primary}`,...(scomp?{color:Color.secondary,background:Color.primary} : {})}}  onClick={()=>{setscomp(!scomp);setoverview(false);setmycomp(false)}}>Submit Complaints</li>
+                <li className={`mycom ${mycomp ? "open" : ""}`} style={{border: `5px solid ${Color.primary}`,...(mycomp?{color:Color.secondary,background:Color.primary} : {})}} onClick={()=>{setmycomp(!mycomp);setoverview(false);setscomp(false)}}>My Complaints</li>
+                <li className="vnav" style={{border: `5px solid ${Color.primary}`}}>Analytics</li>
+                <li className='logout' onClick={()=>{loginset(!login);setnavi(false)}} style={{background:Color.primary,color:Color.secondary}}>log out</li>
             </div>
         </>
     )

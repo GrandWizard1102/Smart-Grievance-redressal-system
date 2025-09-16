@@ -43,13 +43,11 @@
 }
 #topbar{
    display:flex;
-   background:darkslategray;
    justify-content:"center";
 
 }
 #ulist{
   display:flex;
-  color:white;
   list-style:none;
   text-align:center;
   justify-content:space-around;
@@ -68,7 +66,6 @@
 }
 .hamburger .line {
   height: 4px;
-  background: white;
   border-radius: 2px;
   opacity: 90%;
 }
