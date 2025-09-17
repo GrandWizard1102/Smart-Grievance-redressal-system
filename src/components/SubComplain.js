@@ -6,7 +6,7 @@ const SubComplain=()=>{
         <form>
         <h1 style={{textAlign:"center",color:Color.white,margin:"10px"}}>Submit complaint</h1>
         <div id='subcol'>
-           <div id="grid-item" style={{backgroundColor: Color.primary}}>
+           <div id="reccomp" style={{backgroundColor: Color.primary}}>
             <h3 style={{color:"white"}}>Recent community Issues</h3>
             <Subissue/>
             </div>
@@ -30,17 +30,17 @@ const SubComplain=()=>{
                     <textarea id="message" type="text" name="message" rows="5" cols="40" placeholder='Brief description here' />
                 </form>
             </div>
-            <div id="grid-item" style={{backgroundColor: Color.primary}}>
-            <h3 for="img" style={{color:"white"}}>Photo Upload</h3>
-             <div id="image">
-                <input type="file" style={{border:`dotted 2px ${Color.secondary}`}} id="img" name="img" accept='image/*' required/>
-                <div id="imgtips" style={{border:`dotted 2px ${Color.secondary}`,color:Color.secondary}}>
-                    <label style={{textAlign:"center",fontSize:"20px"}}>Photo Tips</label>
-                    <li>Take clear, well-lit photos</li>
-                    <li>Show the issue from multiple angles</li>
-                    <li>Include context (street signs, buildings)</li>
+            <div id="imageupl" style={{backgroundColor: Color.primary,borderRadius:"20px"}}>
+                <h3 for="img" style={{color:"white"}}>Photo Upload</h3>
+                <div id="image">
+                    <input type="file" style={{border:`dotted 2px ${Color.secondary}`}} id="img" name="img" accept='image/*' required/>
+                    <div id="imgtips" style={{border:`dotted 2px ${Color.secondary}`,color:Color.secondary}}>
+                        <label style={{textAlign:"center",fontSize:"20px"}}>Photo Tips</label>
+                        <li>Take clear, well-lit photos</li>
+                        <li>Show the issue from multiple angles</li>
+                        <li>Include context (street signs, buildings)</li>
+                    </div>
                 </div>
-             </div>
             </div>
         </div>
         <button id="submitComplaint" type='Submit' style={{backgroundColor: Color.primary,color:Color.secondary}}>Submit Complaint</button>
