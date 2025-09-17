@@ -39,7 +39,7 @@ export function Subissue(){
 }];
     return (
         <Paper elevation={1} sx={{ borderRadius: "16px", p:"2px" ,m:2,overflow:"auto"}}>
-            <Paper elevation={0} sx={{ borderRadius: "16px",maxHeight:"400px",overflowY:"auto"}}>
+            <Paper elevation={0} spacing={1} sx={{ borderRadius: "16px",maxHeight:"400px",overflowY:"auto"}}>
             <Typography variant="subtitle1"> Recent Sub-Issue</Typography>
             {issues.length===0?<Typography variant="body1">No issues reported yet.</Typography>:
             issues.map((issues)=>{
