@@ -5,6 +5,8 @@ import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { alpha } from '@mui/material/styles';
+import Color from './Color'
 export function IssueBox({label, discription, catogory, status,priority,date,location }) {
     const getcolor=(status)=>{
         switch(status?.toLowerCase()){
@@ -37,30 +39,30 @@ export function IssueBox({label, discription, catogory, status,priority,date,loc
 
     return (
         <>
-            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 }}>
-                <Stack direction="row" spacing={1} alignItems="center">
+            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,backgroundColor:Color.primary}}>
+                <Stack direction="row" spacing={1} alignItems="center" color={Color.secondary}>
                     <Icon color={getcolor(status)} fontSize="small" />
                     <Typography variant="h5" fontWeight="bold">{label}</Typography>
                 </Stack>
-                <Stack direction="row" spacing={1} alignItems="center">
+                <Stack direction="row" spacing={1} alignItems="center" color={Color.secondary}>
                     <Stack direction="row" spacing={0.5} alignItems="center">
                         <RoomOutlinedIcon color="disabled" fontSize="small" />
                         <Typography variant="body2">{location}</Typography>
 
                     </Stack>
-                    <Stack direction="row" spacing={0.5} alignItems="center">
+                    <Stack direction="row" spacing={0.5} alignItems="center" color={Color.secondary}>
                         <CalendarTodayOutlinedIcon color="disabled" fontSize="small" />
                         <Typography variant="body2">{date}</Typography>
                     </Stack>
                    
-                     <Chip label={priority} color={getPcolor(priority)} variant="filled"  sx={{ textDecoration: "none" }}/>
+                     <Chip label={priority}  variant="outlined"  sx={{ textDecoration: "none",backgroundColor:(theme)=>alpha(theme.palette[getPcolor(priority)].main,.8) ,color:Color.secondary}}/>
                 </Stack>
-                <Stack>
+                <Stack color={Color.secondary}>
                     <Typography variant="body1" sx={{ padding: "5px" }}>{discription}</Typography>
                 </Stack>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }} color={Color.secondary}>
                     <Chip label={status} color={getcolor(status)} variant="filled"  sx={{ textDecoration: "none" }}/>
-                    <Chip label={catogory} variant="outlined"   sx={{ textDecoration: "none" }}  />
+                    <Chip label={catogory}  variant="outlined"   sx={{ textDecoration: "none",color:Color.secondary}}  />
                 </Box>
 
 

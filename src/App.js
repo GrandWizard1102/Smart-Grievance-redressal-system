@@ -3,6 +3,7 @@ import color from './components/Color'
 import Login from  './components/Login';
 //import Body from './components/Body';
 import Nav from './components/Nav';
+import Mycomplain from './components/Mycomplain';
 import SubComplain from './components/SubComplain';
 //import Logcontext from './components/logcontext';
 import { useState } from 'react';
@@ -72,6 +73,7 @@ function App() {
     //<Body cl1="Recent Activites" cl2="Others" />*/}
     {Overview && <OverView user={userid}/>}
     {scomp && <SubComplain/>}
+    {mycomp && <Mycomplain />}
     </div>
     </>
      }
