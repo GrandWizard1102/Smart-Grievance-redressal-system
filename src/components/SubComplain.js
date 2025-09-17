@@ -1,5 +1,6 @@
 import Color from './Color';
 import './subcomp.css'
+import { Subissue } from './subissues';
 const SubComplain=()=>{
     return(
         <form>
@@ -7,6 +8,7 @@ const SubComplain=()=>{
         <div id='subcol'>
            <div id="grid-item" style={{backgroundColor: Color.primary}}>
             <h3 style={{color:"white"}}>Recent community Issues</h3>
+            <Subissue/>
             </div>
             <div id="complaintinput" style={{backgroundColor: Color.primary}}>
                 <form id="compdet">

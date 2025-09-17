@@ -26,7 +26,7 @@ export function SubissueBox({label, discription, catogory, status,priority,date,
 
     return (
         <>
-            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 }}>
+            <Paper elevation={1} sx={{ borderRadius: "16px", p: 1 }}>
                 <Box  sx={{display:"flex",justifyContent:"space-between" }}>
                     
                     <Typography variant="h5" fontWeight="bold">{label}</Typography>
