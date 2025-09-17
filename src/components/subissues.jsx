@@ -20,9 +20,26 @@ export function Subissue(){
     priority: "low",
     date: "20/12/2024",
     location: "123 Main Street, Downtown",
+},{
+    label: "Broken Watertank on Main Street",
+    description: "The Wathertankn has been broken for over a week, making people suffer a lot.",
+    category: "Basic Needs",
+    status: "Pending",
+    priority: "low",
+    date: "20/12/2024",
+    location: "123 Main Street, Downtown",
+},{
+    label: "Broken Watertank on Main Street",
+    description: "The Wathertankn has been broken for over a week, making people suffer a lot.",
+    category: "Basic Needs",
+    status: "Pending",
+    priority: "low",
+    date: "20/12/2024",
+    location: "123 Main Street, Downtown",
 }];
     return (
-        <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,m:2}}>
+        <Paper elevation={1} sx={{ borderRadius: "16px", p:"2px" ,m:2,overflow:"auto"}}>
+            <Paper elevation={0} sx={{ borderRadius: "16px",maxHeight:"400px",overflowY:"auto"}}>
             <Typography variant="subtitle1"> Recent Sub-Issue</Typography>
             {issues.length===0?<Typography variant="body1">No issues reported yet.</Typography>:
             issues.map((issues)=>{
@@ -30,6 +47,7 @@ export function Subissue(){
             }
             )
         }
+        </Paper>
             </Paper>
     );
 }

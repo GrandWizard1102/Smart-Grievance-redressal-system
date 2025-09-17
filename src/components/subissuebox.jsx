@@ -26,32 +26,32 @@ export function SubissueBox({label, discription, catogory, status,priority,date,
 
     return (
         <>
-            <Paper elevation={1} sx={{ borderRadius: "16px", p: 1 }}>
-                <Box  sx={{display:"flex",justifyContent:"space-between" }}>
+            <Paper elevation={1} sx={{ borderRadius: "12px", p:"1px" ,mb:1,maxHeight:200}}>
+                <Box  sx={{display:"flex",justifyContent:"space-between",padding:"2px"}} >
                     
-                    <Typography variant="h5" fontWeight="bold">{label}</Typography>
+                    <Typography variant="subtitle2" fontWeight="bold" >{label}</Typography>
                     <Chip label={priority} color={getPcolor(priority)} variant="filled"  sx={{ textDecoration: "none" }}/>
 
                 </Box>
-                <Stack direction="row" spacing={1} alignItems="center">
-                    <Stack direction="row" spacing={0.5} alignItems="center">
+               
+                    <Stack direction="row" spacing={0.5} alignItems="center" sx={{padding:"1px"}} >
                         <RoomOutlinedIcon color="disabled" fontSize="small" />
-                        <Typography variant="body2">{location}</Typography>
+                        <Typography variant="caption">{location}</Typography>
 
                     </Stack>
                     
                    
                      
-                </Stack>
-                <Stack direction="row" spacing={0.5} alignItems="center">
+                
+                <Stack direction="row" spacing={0.5} alignItems="center" sx={{padding:"1px"}} >
                         <Chip label={status} color={getcolor(status)} variant="filled"  sx={{ textDecoration: "none" }}/>
                         <CalendarTodayOutlinedIcon color="disabled" fontSize="small" />
-                        <Typography variant="body2">{date}</Typography>
+                        <Typography variant="captioin">{date}</Typography>
                     </Stack>
-                <Stack>
-                    <Typography variant="body1" sx={{ padding: "5px" }}>{discription}</Typography>
+                <Stack sx={{ padding: "2px" }}>
+                    <Typography variant="caption" >{discription}</Typography>
                 </Stack>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between",padding:"2px" }}>
                    
                     <Chip label={catogory} variant="outlined"   sx={{ textDecoration: "none" }}  />
                     <LikeButton/>
