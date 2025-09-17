@@ -2,10 +2,10 @@ import { Box, Chip, Paper, Stack, Typography } from "@mui/material";
 import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
-import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { alpha } from '@mui/material/styles';
+import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';
 import Color from './Color'
 export function IssueBox({label, discription, catogory, status,priority,date,location }) {
     const getcolor=(status)=>{
@@ -29,7 +29,7 @@ export function IssueBox({label, discription, catogory, status,priority,date,loc
     const getIcon=(status)=>{
         switch(status?.toLowerCase()){
             case "pending": return AccessTimeIcon;
-            case "in progress": return ModelTrainingIcon;
+            case "in progress": return ReportProblemOutlinedIcon;
             case "resolved": return DoneOutlineIcon;
             case "rejected": return CancelIcon;
             default: return "default";
