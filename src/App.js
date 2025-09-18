@@ -5,6 +5,7 @@ import Login from  './components/Login';
 import Nav from './components/Nav';
 import Mycomplain from './components/Mycomplain';
 import SubComplain from './components/SubComplain';
+import Analytics from './components/Analytics';
 //import Logcontext from './components/logcontext';
 import { useState } from 'react';
 import { Link, } from 'react-router-dom';
@@ -25,6 +26,7 @@ function App() {
     const [Overview,setoverview]=useState(true);
     const [scomp,setscomp]=useState(false);
     const [mycomp,setmycomp]=useState(false);
+    const [analy,setanaly]=useState(false);
 
       const liStyle={
           textAlign:"center",
@@ -67,13 +69,14 @@ function App() {
           </ul>
           <button style={btStyle} className="Submit" onClick={()=>{setlogin(!login)}}>{userid}</button>
     </nav>
-    {navi && <Nav mycomp={mycomp} setmycomp={setmycomp} setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
+    {navi && <Nav mycomp={mycomp} setmycomp={setmycomp} analy={analy} setanaly={setanaly} setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
     <div className={`Body${navi? "Body11":""}`}>
     {/*<Body cl1="Raise a Complaint" cl2="Check Status"/>
     //<Body cl1="Recent Activites" cl2="Others" />*/}
     {Overview && <OverView user={userid}/>}
     {scomp && <SubComplain/>}
     {mycomp && <Mycomplain />}
+    {analy && <Analytics/>}
     </div>
     </>
      }

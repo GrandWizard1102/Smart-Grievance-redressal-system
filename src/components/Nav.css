@@ -5,8 +5,8 @@ body{
 .verticalNav{
     z-index: 1000;
     position: fixed;
-    margin-top: 0;
     height: 100%;
+    margin-top: 0;
 }
 .logout{
     text-align: center;
@@ -19,7 +19,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
 }
-.vnav,.overv,.mycom{
+.vnav,.overv,.mycom,.anal{
     width: 200px;
     height: 30px;
     list-style: none;

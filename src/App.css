@@ -82,8 +82,9 @@
   height: 30px;
   margin-right: 4px;
 }
-.Body{
-  margin-left: 0;
+body{
+  max-height: 400px;
+  overflow: hidden;
 }
 .BodyBody11{
   margin-top: 0;
