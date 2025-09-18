@@ -4,7 +4,6 @@ const OverHeader=({title})=>{
         backgroundColor:Color.primary,
         color:Color.secondary,
         width:"50%",
-        marginLeft:"30%",
         margin:"20px",
         textAlign:"center",
         padding:"10px",
@@ -14,7 +13,7 @@ const OverHeader=({title})=>{
     return(
         <div style={hStyle}>
             <h3>Welcome Back {title}</h3>
-            <p>Thanks for making city better</p>
+            <p>Thank you for making the city better</p>
         </div>
     )
 }

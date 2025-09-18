@@ -39,7 +39,7 @@ export function IssueBox({label, discription, catogory, status,priority,date,loc
 
     return (
         <>
-            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,backgroundColor:Color.primary}}>
+            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,backgroundColor:Color.primary,transition:"all 0.2s ease-in-out","&:hover":{transform: "scale(1.02)",},}}>
                 <Stack direction="row" spacing={1} alignItems="center" color={Color.secondary}>
                     <Icon color={getcolor(status)} fontSize="small" />
                     <Typography variant="h5" fontWeight="bold">{label}</Typography>

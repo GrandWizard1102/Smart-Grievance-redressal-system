@@ -1,6 +1,7 @@
 import { Box, Chip, Paper, Stack, Typography } from "@mui/material";
 import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import './log.css'
 
 import { LikeButton } from "./likebotton";
 export function SubissueBox({label, discription, catogory, status,priority,date,location }) {
@@ -26,7 +27,7 @@ export function SubissueBox({label, discription, catogory, status,priority,date,
 
     return (
         <>
-            <Paper elevation={3} sx={{padding:"10px",borderRadius: "12px", p:"2px" ,mb:2,maxHeight:200}}>
+            <Paper elevation={3} sx={{padding:"10px",borderRadius: "12px", p:"2px" ,mb:2,maxHeight:200, transition:"all 0.2s ease-in-out","&:hover":{transform: "scale(1.02)",},}} >
                 <Box  sx={{display:"flex",justifyContent:"space-between",padding:"2px"}} >
                     
                     <Typography variant="subtitle2" fontWeight="bold" >{label}</Typography>

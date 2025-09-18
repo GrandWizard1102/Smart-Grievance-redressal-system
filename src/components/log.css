@@ -39,3 +39,15 @@ h2
     text-decoration: underline;
     cursor: pointer;
 }
+.smallbox{
+    transition: all 0.2s ease-in-out;
+}
+.smallbox:hover{
+   transform: scale(1.05);
+}
+.subissuebox{
+     transition: all 0.2s ease-in-out;
+}
+.subissuebox:hover{
+   transform: scale(1.05);
+}

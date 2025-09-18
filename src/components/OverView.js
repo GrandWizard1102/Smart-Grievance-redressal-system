@@ -10,7 +10,7 @@ const OverView=({user})=>{
     const oStyle={maxHeight:"550px",overflowY:"scroll"}
     return(
         <div style={oStyle}>
-        <OverHeader title={user} />
+        <div style={{display:"flex",justifyContent:"center",fontSize:"20px"}}><OverHeader title={user} /></div>
         <Smallboxview/>
         <Issuesview/>
         </div>

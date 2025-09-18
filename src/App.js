@@ -73,10 +73,10 @@ function App() {
     <div className={`Body${navi? "Body11":""}`}>
     {/*<Body cl1="Raise a Complaint" cl2="Check Status"/>
     //<Body cl1="Recent Activites" cl2="Others" />*/}
-    {Overview && <OverView user={userid}/>}
-    {scomp && <SubComplain/>}
-    {mycomp && <Mycomplain />}
-    {analy && <Analytics/>}
+      {Overview && <div className='content1'><OverView user={userid}/></div>}
+      {scomp && <div className='content1'><SubComplain/></div>}
+      {mycomp && <div className='content2'><Mycomplain /></div>}
+      {analy && <div className='content3'><Analytics/></div>}
     </div>
     </>
      }
