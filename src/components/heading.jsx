@@ -16,8 +16,8 @@ export function Header({title,subtitle,showicon}) {
             </Stack>
             {showicon &&(
                 <Stack direction="row" spacing={1} alignItems="center" sx={{padding:"1px"}} >
-                    <Button variant="outlined"  color="diabled" sx={{borderRadius:2}}startIcon={<DownloadIcon />} >Export</Button>
-                    <Button variant="outlined"color="disabled" sx={{borderRadius:2}}startIcon={<RefreshIcon />} >Refresh</Button>
+                    <Button variant="outlined"  color="diabled" sx={{borderRadius:2,textTransform: "none"}}startIcon={<DownloadIcon />} >Export</Button>
+                    <Button variant="outlined"color="disabled" sx={{borderRadius:2,textTransform: "none"}}startIcon={<RefreshIcon />} >Refresh</Button>
                 </Stack>
             )}
         </Card>
