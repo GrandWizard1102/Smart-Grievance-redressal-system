@@ -1,6 +1,6 @@
 const Color={
-    primary:"#8686AC",
-    secondary:"white",
-    white:"#505081",
+    primary:"#CFFFDC",
+    secondary:"black",
+    white:"#2E6F40",
 }
 export default Color;
