@@ -41,7 +41,7 @@ export function Mycomplainbox({label, discription, catogory, status,priority,dat
 
     return (
         <>
-            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 }}>
+            <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,m:2}}>
                 <Box sx={{display:"flex",justifyContent:"space-between"}} >
                 <Stack direction="row" spacing={1} alignItems="center" >
                     <Icon color={getcolor(status)} fontSize="small" />
