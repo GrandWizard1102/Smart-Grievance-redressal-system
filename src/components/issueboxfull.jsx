@@ -37,6 +37,22 @@ const issues=[{
     priority: "low",
     date: "20/12/2024",
     location: "123 Main Street, Downtown",
+},{
+    label: "Broken Watertank on Main Street",
+    description: "The Wathertankn has been broken for over a week, making people suffer a lot.",
+    category: "Basic Needs",
+    status: "in progress",
+    priority: "low",
+    date: "20/12/2024",
+    location: "123 Main Street, Downtown",
+},{
+    label: "Broken Watertank on Main Street",
+    description: "The Wathertankn has been broken for over a week, making people suffer a lot.",
+    category: "Basic Needs",
+    status: "in progress",
+    priority: "low",
+    date: "20/12/2024",
+    location: "123 Main Street, Downtown",
 }];
 export function Issuesview(){
     return (
