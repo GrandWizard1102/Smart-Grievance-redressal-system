@@ -3,8 +3,9 @@ import { Header } from './heading';
 import './subcomp.css'
 import { Subissue } from './subissues';
 const SubComplain=()=>{
+    const sStyle={maxHeight:"520px",overflowY:"scroll"}
     return(
-        <form>
+        <form style={sStyle}>
         <Header title="Submit Complaints" subtitle="Report an Issue in your Community" showicon={false} />
         <div id='subcol'>
            <div id="reccomp" style={{backgroundColor: Color.primary}}>

@@ -7,7 +7,7 @@ import { Smallboxview } from './smallboxfull';
 
 const OverView=({user})=>{
     console.log("Inside Overview");
-    const oStyle={maxHeight:"700px",overflow:"scroll"}
+    const oStyle={maxHeight:"550px",overflowY:"scroll"}
     return(
         <div style={oStyle}>
         <OverHeader title={user} />
