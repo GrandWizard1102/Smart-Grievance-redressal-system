@@ -1,9 +1,10 @@
 import Color from './Color'
+import { Header } from './heading';
 import './Mycomplain.css'
 const Mycomplain=()=>{
     return(
         <>
-            <h1 style={{textAlign:"center",color:Color.white,margin:"10px"}}>My Complaints</h1>
+            <Header title="My Complaints" subtitle="Track your Submited Issue" showicon={true} />
             <form id="searchbar" style={{backgroundColor:Color.primary}}>
                 
             </form>
