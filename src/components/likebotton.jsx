@@ -1,8 +1,8 @@
 import { Badge, IconButton, Tooltip } from '@mui/material';
 import { useState } from 'react'
 import FavoriteIcon from '@mui/icons-material/Favorite';
-export function LikeButton(){
-    const [count,setCount]=useState(0)
+export function LikeButton({Pvalue}){
+    const [count,setCount]=useState(Pvalue)
     const [liked,setLiked]=useState(false)
     const handleCLick=()=>{
         setCount(liked?count-1:count+1);
