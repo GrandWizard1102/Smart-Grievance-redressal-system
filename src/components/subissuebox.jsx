@@ -54,7 +54,7 @@ export function SubissueBox({label, discription, catogory, status,priority,date,
                 <Box sx={{ display: "flex", justifyContent: "space-between",padding:"2px" }}>
                    
                     <Chip label={catogory} variant="outlined"   sx={{ textDecoration: "none" }}  />
-                    <LikeButton/>
+                    <LikeButton Pvalue={10}/>
                 </Box>
 
 

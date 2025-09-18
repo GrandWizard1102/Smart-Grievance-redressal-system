@@ -1,10 +1,11 @@
 import Color from './Color';
+import { Header } from './heading';
 import './subcomp.css'
 import { Subissue } from './subissues';
 const SubComplain=()=>{
     return(
         <form>
-        <h1 style={{textAlign:"center",color:Color.white,margin:"10px"}}>Submit complaint</h1>
+        <Header title="Submit Complaints" subtitle="Report an Issue in your Community" showicon={false} />
         <div id='subcol'>
            <div id="reccomp" style={{backgroundColor: Color.primary}}>
             <h3 style={{color:"white"}}>Recent community Issues</h3>
