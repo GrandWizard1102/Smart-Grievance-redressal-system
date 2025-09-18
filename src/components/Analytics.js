@@ -1,7 +1,8 @@
+import { Header } from './heading';
 const Analytics=()=>{
     return(
         <div>
-            <h1>Analytics</h1>
+             <Header title="Analytics" subtitle="Your complaint submission insights"/>
         </div>
     )
 }
