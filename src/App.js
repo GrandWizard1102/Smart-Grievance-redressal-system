@@ -16,6 +16,7 @@ function Header(props){
   const hStyle={
       color:Color.white,
       textAlign:"center",
+      margin:"0",
   }
   return <h1 style={hStyle}>Hi! {props.title}</h1>
 }
@@ -70,7 +71,7 @@ function App() {
           <button style={btStyle} className="Submit" onClick={()=>{setlogin(!login)}}>{userid}</button>
     </nav>
     {navi && <Nav mycomp={mycomp} setmycomp={setmycomp} analy={analy} setanaly={setanaly} setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
-    <div className={`Body${navi? "Body11":""}`} style={{opacity:navi?0.5:1}}>
+    <div className="BodyBody11" style={{opacity:navi?0.5:1}} onClick={()=>{setnavi(false)}}>
       {Overview && <div className='content1'><OverView user={userid}/></div>}
       {scomp && <div className='content1'><SubComplain/></div>}
       {mycomp && <div className='content2'><Mycomplain /></div>}
