@@ -57,7 +57,6 @@ const issues=[{
 export function Issuesview(){
     return (
         <Paper elevation={1} sx={{ borderRadius: "16px", p: 2 ,m:2}}>
-            <Typography variant="subtitle1"> Recent Issue</Typography>
             <Stack spacing={2}>
             {issues.length===0?<Typography variant="body1">No issues reported yet.</Typography>:
             issues.map((issues)=>{
