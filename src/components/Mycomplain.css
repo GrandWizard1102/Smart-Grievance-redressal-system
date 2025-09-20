@@ -1,10 +1,4 @@
-#searchbar{
-    border-radius: 20px;
-    width: 70%;
-    height: 100px;
-    text-align: center;
-    margin: auto;
-}
+
 #options,#compid,#status,#arrange{
     border-radius: 20px;
     padding: 10px;

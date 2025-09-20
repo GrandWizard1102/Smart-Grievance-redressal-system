@@ -22,7 +22,7 @@ function Header(props){
 function App() {
     const [login,setlogin]=useState(true);
     const [userid,setuserid]=useState("Login");
-    const[navi,setnavi]=useState(true);
+    const[navi,setnavi]=useState(false);
     const [Overview,setoverview]=useState(true);
     const [scomp,setscomp]=useState(false);
     const [mycomp,setmycomp]=useState(false);
@@ -56,7 +56,7 @@ function App() {
     {login ? 
     <Login userdata={setuserid} loginset={setlogin}/>: 
     <>
-    <nav id="topbar" style={{background:color.primary,}}>
+    <nav id="topbar" style={{background:color.primary,maxWidth:"100vw",overflow:"auto"}}>
           <div className={`hamburger ${navi?"navi":""}`} onClick={()=>{setnavi(!navi)}}>
             <div className='line' style={{background:color.secondary}}></div>
             <div className='line'style={{background:color.secondary}}></div>
@@ -70,9 +70,7 @@ function App() {
           <button style={btStyle} className="Submit" onClick={()=>{setlogin(!login)}}>{userid}</button>
     </nav>
     {navi && <Nav mycomp={mycomp} setmycomp={setmycomp} analy={analy} setanaly={setanaly} setnavi={setnavi} scomp={scomp} setscomp={setscomp} Overview={Overview} setoverview={setoverview} user={userid} login={login}loginset={setlogin}/>}
-    <div className={`Body${navi? "Body11":""}`}>
-    {/*<Body cl1="Raise a Complaint" cl2="Check Status"/>
-    //<Body cl1="Recent Activites" cl2="Others" />*/}
+    <div className={`Body${navi? "Body11":""}`} style={{opacity:navi?0.5:1}}>
       {Overview && <div className='content1'><OverView user={userid}/></div>}
       {scomp && <div className='content1'><SubComplain/></div>}
       {mycomp && <div className='content2'><Mycomplain /></div>}

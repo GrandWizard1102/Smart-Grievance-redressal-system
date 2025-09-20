@@ -55,17 +55,17 @@
 }
 .hamburger{
   cursor: pointer;
-  width: 30px;
-  height: 25px;
+  width:2%;
+  height: 4vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 1%;
-  margin-left: 10px;
+  margin-left: 2%;
   transition: all 0.3s ease;
 }
 .hamburger .line {
-  height: 4px;
+  height: 20%;
   border-radius: 2px;
   opacity: 90%;
 }
@@ -73,22 +73,25 @@
   transform: scale(1.05);
 }
 .hamburger.navi{
-
   flex-direction: row;
   align-items: center;
 }
 .hamburger.navi .line {
-  width: 5px;
-  height: 30px;
+  width: 2vw;
+  height: 4vh;
   margin-right: 4px;
 }
 body{
-  max-height: 400px;
+  width: 100vw;
+  height: 90vh;
   overflow: hidden;
 }
 .BodyBody11{
+  max-width: 100vw;
+  max-height: 90vh;
+  overflow: auto;
   margin-top: 0;
-  margin-left: 250px;
+  margin-left: 0;
 }
 .content1,.content2,.content3{
   animation: fadeIn 0.5s ease;

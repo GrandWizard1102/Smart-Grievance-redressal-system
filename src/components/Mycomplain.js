@@ -9,7 +9,7 @@ const Mycomplain=()=>{
         < div style={mStyle}>
         
             <Header title="My Complaints" subtitle="Track your Submited Issue" showicon={true} />
-            <form id="searchbar" style={{backgroundColor:Color.primary,height:"100px"}}>
+            <form className="sbar"style={{backgroundColor:Color.primary,height:"100px",display:"flex",borderRadius:"20px",justifyContent:"center",maxWidth:"90%",overflowX:"auto",margin:"20px auto"}}>
                 <input id="compid" placeholder='Enter complaint id'/> 
                 <select id="options">
                     <option value="" selected disabled>--Select a category--</option>
