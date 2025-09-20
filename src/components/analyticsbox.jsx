@@ -64,7 +64,7 @@ export function AnalyticsBox({title}) {
     return(
         <Paper elevation={3} sx={{ padding: '20px', textAlign: 'center',backgroundColor:fullback(title),borderRadius:"16px"}}>
             <Stack   sx={{color:titelcolor(title)}} alignItems="center" justifyContent="center" mb={2}>
-                <Typography variant="h6" >Resolutioin Rate</Typography>
+                <Typography variant="h6" >{title}</Typography>
             </Stack>
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
                 <Typography variant="h4" fontWeight="bold" sx={{color:prercentcolor(title)}}>75%</Typography>
