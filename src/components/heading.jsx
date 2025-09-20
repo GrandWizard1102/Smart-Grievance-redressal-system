@@ -13,7 +13,7 @@ export function Header({title,subtitle,showicon}) {
     }
     const Icon=icon(title);
     return(
-        <Card elevation={1} sx={{borderRadius:3,display:"flex",justifyContent:"space-between",alignItems:"center",padding:"10px",mb:2}}>
+        <Card elevation={1} sx={{borderRadius:3,display:"flex",justifyContent:title==="My Complaints"?"space-between":"center",alignItems:"center",padding:"10px",mb:2}}>
             <Stack  direction="row" spacing={1}   sx={{alignItems:"center",justifyContent:"center",padding:"10px",paddingLeft:"30px"}} >
                 <Stack alignItems="center" justifyContent="center" sx={{backgroundColor:"#43ca80",color:"white",borderRadius:"40%",width:50,height:50}}>
                     <Icon fontSize="large" />
