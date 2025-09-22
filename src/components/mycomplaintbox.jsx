@@ -93,7 +93,7 @@
                 <Dialog open={pop} onClose={() => setpop(false)} fullWidth maxWidth="sm">
                 <DialogTitle>
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        <Typography variant="h5" fontWeight="bold">{label}</Typography>
+                        <Typography variant="h5" fontWeight="bold" sx={{color:"black"}}>{label}</Typography>
                         <Chip label={priority} variant="outlined" sx={{ 
                             textDecoration: "none", 
                             backgroundColor: (theme) => alpha(theme.palette[getPcolor(priority)].main, .8), 

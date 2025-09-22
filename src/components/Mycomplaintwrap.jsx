@@ -12,7 +12,8 @@ export function Mycomplainwrap(){
     date: "1/15/2024",
     location: "123 Main Street, Downtown",
     response: "we have arranged a team to sort out the problem",
-    update:true
+    update:true,
+    selectedImage: [download]
   },
 {
     label: "Broken Watertank on Main Street",
@@ -43,8 +44,8 @@ export function Mycomplainwrap(){
     date: "20/12/2024",
     location: "123 Main Street, Downtown",
     response: "we have arranged a team to sort out the problem",
-    update:false,
-    selectedImage: [download]
+    update:false
+    
 }];
 
     return (
