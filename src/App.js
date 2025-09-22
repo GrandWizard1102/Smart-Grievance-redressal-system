@@ -28,6 +28,7 @@ function App() {
     const [scomp,setscomp]=useState(false);
     const [mycomp,setmycomp]=useState(false);
     const [analy,setanaly]=useState(false);
+    const [user,setuser]=useState(true);
 
       const liStyle={
           textAlign:"center",
@@ -55,7 +56,14 @@ function App() {
   <Header title="Welcome Citizen" />
     
     {login ? 
-    <Login userdata={setuserid} loginset={setlogin}/>: 
+    <>
+    <div id="toggle">
+      <label className={`user${user?"":" closed"}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(true)}}>User</label>
+      <label className={`admin${user?" closed":""}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(false)}}>Admin</label>
+    </div>
+    <Login userdata={setuserid} loginset={setlogin}/>
+    </>
+    : 
     <>
     <nav id="topbar" style={{background:color.primary,maxWidth:"100vw",overflow:"auto"}}>
           <div className={`hamburger ${navi?"navi":""}`} onClick={()=>{setnavi(!navi)}}>
