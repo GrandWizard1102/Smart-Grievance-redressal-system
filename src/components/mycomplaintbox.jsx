@@ -12,7 +12,7 @@ import Color from './Color'
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { useState } from "react";
-export function Mycomplainbox({label, discription, catogory, status,priority,date,location }) {
+export function Mycomplainbox({label, discription, catogory, status,priority,date,location,response,update }) {
     const [pop,setpop]=useState(false);
     const getcolor=(status)=>{
         switch(status?.toLowerCase()){
@@ -69,12 +69,13 @@ export function Mycomplainbox({label, discription, catogory, status,priority,dat
                 <Stack >
                     <Typography variant="body1" sx={{ padding: "5px" }}>{discription}</Typography>
                 </Stack>
-                <Stack>
-                    <Stack spacing={0.5} direction="column" sx={{backgroundColor:"#b2d1ffff",borderRadius:"10px",padding:"5px",paddingLeft:"10px"}}>
-                    <Typography variant="body2"  fontWeight="bold">Management Response:</Typography>
-                    <Typography varianr="caption" >we have arranged a team to sort out the problem</Typography>
+                {update&&
+                    <Stack spacing={0.5} direction="column" sx={{backgroundColor:"#e3edfcff",color:"blue",borderRadius:"10px",padding:"5px",paddingLeft:"10px" ,border:"1px solid #c3b7fcff"}}>
+                    <Typography variant="caption"  fontWeight="bold" color="info">Management Response:</Typography>
+                    <Typography variant="caption" sx={{paddingLeft:2}}>{response}</Typography>
                     </Stack>
-                </Stack>
+                }
+               
 
                 <Box sx={{ display: "flex", justifyContent: "space-between",padding:"5px" }} >
                     <Chip label={status} color={getcolor(status)} variant="filled"  sx={{ textDecoration: "none" }}/>
