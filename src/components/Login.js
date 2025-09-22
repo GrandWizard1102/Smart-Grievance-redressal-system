@@ -26,7 +26,7 @@ function Login({ userdata ,loginset}){
             <h2>password:</h2>
             <input type="password" id="password" placeholder='Enter password'  onChange={(e)=>setpass(e.target.value)}/>
             <br/>
-            <button id="submit" style={{backgroundColor:Color.secondary,color: Color.white}}> Submit</button>
+            <button id="submit"  style={{backgroundColor:Color.secondary,color: Color.white,opacity:userid?1:0.4}}> Submit</button>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                  <h4 style={{color:Color.supreme}}>Don't you have an account?</h4>
                  <span className='sign' onClick={()=>{setsign(true)}} style={{color:Color.secondary}}>signup</span>
