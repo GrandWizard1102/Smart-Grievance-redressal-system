@@ -61,7 +61,9 @@ function App() {
       <label className={`user${user?"":" closed"}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(true)}}>User</label>
       <label className={`admin${user?" closed":""}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(false)}}>Admin</label>
     </div>
-    <Login userdata={setuserid} loginset={setlogin}/>
+    {user?<Login key="user" userdata={setuserid} loginset={setlogin} text="User id" user={user}/>:
+    <Login key="admin" userdata={setuserid} loginset={setlogin} text="Admin id" user={user}/>
+    }
     </>
     : 
     <>

@@ -3,7 +3,7 @@ import { Header } from './heading';
 import './subcomp.css'
 import { Subissue } from './subissues';
 const SubComplain=()=>{
-    const sStyle={maxHeight:"520px",overflowY:"scroll"}
+    const sStyle={maxHeight:"82vh",overflowY:"scroll"}
     return(
         <form style={sStyle}>
         <Header title="Submit Complaints" subtitle="Report an Issue in your Community" showicon={false} />
