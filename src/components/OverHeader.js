@@ -1,5 +1,5 @@
 import Color from './Color'
-const OverHeader=({title})=>{
+const OverHeader=({title,user})=>{
     const hStyle={
         backgroundColor:Color.primary,
         color:Color.secondary,
@@ -13,7 +13,7 @@ const OverHeader=({title})=>{
     return(
         <div style={hStyle}>
             <h3>Welcome Back {title}</h3>
-            <p>Thank you for making the city better</p>
+            {user?<p>Thank you for making the city better</p>:<p>The hand that turns problems into peace</p>}
         </div>
     )
 }
