@@ -2,6 +2,8 @@
         Box, Button, Chip, Dialog,  Paper, Stack, Typography, DialogTitle,
         DialogContent,
         DialogActions,
+        IconButton,
+        TextField,
     } from "@mui/material";
     import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
     import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
@@ -14,10 +16,17 @@
     import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
     import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
     import { useState } from "react";
-    export function Mycomplainbox({ label, discription, catogory, status, priority, date, location, response, update,selectedImage }) {
+    import CloseIcon from '@mui/icons-material/Close';
+    export function Mycomplainbox({ label, discription, catogory, status, priority, date, location, response, update,selectedImage,user,setstatus }) {
         const [pop, setpop] = useState(false);
-        const getcolor = (status) => {
-            switch (status?.toLowerCase()) {
+        const [SStatus,setSStatus]=useState(status);
+        const [updatepop,setupdatepop]=useState(false);
+        function statushandle(newstatus){
+            setstatus(newstatus);
+            setSStatus(newstatus);
+        }
+        const getcolor = (SStatus) => {
+            switch (SStatus?.toLowerCase()) {
                 case "pending": return "warning";
                 case "in progress": return "info";
                 case "resolved": return "success";
@@ -34,8 +43,8 @@
                 default: return "default";
             }
         }
-        const getIcon = (status) => {
-            switch (status?.toLowerCase()) {
+        const getIcon = (SStatus) => {
+            switch (SStatus?.toLowerCase()) {
                 case "pending": return AccessTimeIcon;
                 case "in progress": return ReportProblemOutlinedIcon;
                 case "resolved": return DoneOutlineIcon;
@@ -43,7 +52,7 @@
                 default: return "default";
             }
         }
-        const Icon = getIcon(status);
+        const Icon = getIcon(SStatus);
 
         return (
             <>
@@ -82,6 +91,7 @@
                     <Box sx={{ display: "flex", justifyContent: "space-between", padding: "5px" }} >
                         <Chip label={status} color={getcolor(status)} variant="filled" sx={{ textDecoration: "none" }} />
                         <Stack direction="row" spacing={0.5} alignItems="center" >
+                            {!user&& (<Button variant="outlined" size="medium"  color="secondary" sx={{ borderRadius: 3, textTransform: "none" }} onClick={()=>{setupdatepop(true)}}>Update Status</Button>)}
                             <Button variant="outlined" size="medium" sx={{ borderRadius: 3, textTransform: "none" }} startIcon={<RemoveRedEyeOutlinedIcon />} color="info" onClick={() => setpop(true)}>Veiw details</Button>
                             <Button variant="outlined" size="medium" sx={{ borderRadius: 3, textTransform: "none" }} startIcon={<CancelOutlinedIcon />} color="error" >cancel</Button>
                         </Stack>
@@ -165,6 +175,30 @@
                 <DialogActions>
                     <Button onClick={() => setpop(false)} variant="contained">Close</Button>
                 </DialogActions>
+            </Dialog>
+            <Dialog open={updatepop} onClose={()=>{setupdatepop(false)}}  fullWidth maxWidth="xs"  >
+                <Box sx={{padding:"1rem"}}>
+                    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" ,padding:"0px"}}>
+                        <Typography variant="subtitle1" sx={{ fontWeight: "bold" ,color:"black"}}>Update Complaint Status</Typography>
+                        <IconButton onClick={() => { setupdatepop(false) }}>
+                            <CloseIcon />
+                        </IconButton>
+                    </Box>
+                    <Typography variant="caption" sx={{color:"grey",padding:"0px"}}>Update the Status of Complaint: {label} </Typography>
+               
+               <Stack>
+                    <Typography variant="suntitle2" sx={{padding:"0.5rem"}}>Response (Optional)</Typography>
+                    <TextField variant="outlined" label="response" placeholder="Provide the response to the civilian" color="info"></TextField>
+               </Stack>
+               <Box sx={{padding:"1rem 0.5rem 0.5rem 3rem",display:"flex",justifyContent:"space-between"}}>
+                    <Button variant="outlined" sx={{textTransform:"none" }} size="small" color="error"> Mark Pending</Button>
+                    <Button variant="outlined" sx={{textTransform:"none"}} size="small"> Mark in Progress</Button>
+                    <Button variant="contained" color="success" sx={{textTransform:"none"}} size="small"> Mark Resolved</Button>
+               </Box>
+               </Box>
+
+
+
             </Dialog>
                 
             </>

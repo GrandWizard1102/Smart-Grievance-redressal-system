@@ -3,12 +3,12 @@ import Color from './Color'
 import { Header } from './heading';
 import './Mycomplain.css'
 import { Mycomplainwrap } from './Mycomplaintwrap';
-const Mycomplain=()=>{
+const Mycomplain=({user})=>{
     const mStyle={maxHeight:"550px",overflowY:"scroll"}
     return(
         < div style={mStyle}>
         
-            <Header title="My Complaints" subtitle="Track your Submited Issue" showicon={true} />
+            <Header title="My Complaints" subtitle="Track your Submited Issue" showicon={true} user={user} />
             <form className="sbar"style={{backgroundColor:Color.primary,height:"100px",display:"flex",borderRadius:"20px",justifyContent:"center",maxWidth:"90%",overflowX:"auto",margin:"20px auto"}}>
                 <input id="compid" placeholder='Enter complaint id'/> 
                 <select id="options">
@@ -29,7 +29,7 @@ const Mycomplain=()=>{
                 </select>
             </form>
             <Box sx={{overflowY:"auto"}}>
-            <Mycomplainwrap/>
+            <Mycomplainwrap user={user}/>
             </Box>
         </div>
     )

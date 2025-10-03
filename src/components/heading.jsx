@@ -3,7 +3,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import DownloadIcon from '@mui/icons-material/Download';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
-export function Header({title,subtitle,showicon}) {
+export function Header({title,subtitle,showicon,user}) {
     const icon=(title)=>{
         switch(title?.toLowerCase()){
             case "my complaints": return DescriptionIcon;
@@ -19,7 +19,7 @@ export function Header({title,subtitle,showicon}) {
                     <Icon fontSize="large" />
                 </Stack>
                 <Stack >
-                    <Typography variant="h5" fontWeight="bold" >{title}</Typography>
+                    <Typography variant="h5" fontWeight="bold" >{user?"My Complaints":"All Complaints"}</Typography>
                     <Typography variant="body1" >{subtitle}</Typography>
                 </Stack>
             </Stack>

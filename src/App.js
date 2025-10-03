@@ -86,7 +86,7 @@ function App() {
         <div className="BodyBody11" style={{opacity:navi?0.5:1}} onClick={()=>{setnavi(false)}}>
           {Overview && <div className='content1'><OverView userid={userid} user={user}/></div>}
           {scomp && <div className='content1'><SubComplain/></div>}
-          {mycomp && <div className='content2'><Mycomplain /></div>}
+          {mycomp && <div className='content2'><Mycomplain user={user}/></div>}
           {analy && <div className='content3'><Analytics/></div>}
         </div>
         </div>
