@@ -1,5 +1,5 @@
 import Color from './Color'
-const Sign=({ userdata ,loginset})=>{
+const Sign=({ loginset})=>{
     const handlesubmit=(e)=>{
         e.preventDefault();
         let userid=document.getElementById("userid").value;
@@ -9,7 +9,7 @@ const Sign=({ userdata ,loginset})=>{
             alert("Please re-enter password correctly")
         }
         else{
-            userdata(userid);
+            
             loginset(false);
             console.log(pass1);
             console.log(pass2);

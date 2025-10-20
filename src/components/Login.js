@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Sign from './Sign'
 import './log.css'
 import Color from './Color'
+import { Logincontext } from './logcontext';
 
-function Login({ userdata ,loginset,text,user}){
-    const [userid,setuserid]=useState("");
+
+function Login({ text,user}){
+    const{setlogin,setuserid,userid}=useContext(Logincontext)
+   
     const [pass,setpass]=useState("");
     const handlesubmit=(e)=>{
         e.preventDefault();
@@ -12,15 +15,15 @@ function Login({ userdata ,loginset,text,user}){
         console.log("userid:",userid);
         console.log("password:",pass);
         
-        userdata(userid);
-        loginset(false);
+        localStorage.setItem("isloggedin",true)
+        setlogin(false);
     }
-    console.log("userdata prop:", userdata);
-    console.log("login prop:", loginset);
+   
+    console.log("login prop:", setlogin);
 
     const [sign,setsign]=useState(false);
     return(
-       sign?<Sign userdata={userdata} loginset={loginset}/>:<form className="container" style={{backgroundColor: Color.primary}} onSubmit={handlesubmit}>
+       sign?<Sign loginset={setlogin}/>:<form className="container" style={{backgroundColor: Color.primary}} onSubmit={handlesubmit}>
             <h2>{text}</h2>
             <input id="userid" type="text" placeholder='Enter user id'  onChange={(e)=>setuserid(e.target.value)}/>
             <h2>password:</h2>

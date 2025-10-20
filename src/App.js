@@ -7,11 +7,13 @@ import Mycomplain from './components/Mycomplain';
 import SubComplain from './components/SubComplain';
 import Analytics from './components/Analytics';
 //import Logcontext from './components/logcontext';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, } from 'react-router-dom';
 import Color from './components/Color'
 
 import OverView from './components/OverView';
+import { Logincontext } from './components/logcontext';
+
 function Header(props){
   const hStyle={
       color:Color.white,
@@ -21,8 +23,8 @@ function Header(props){
   return <h1 style={hStyle}>Hi! {props.title}</h1>
 }
 function App() {
-    const [login,setlogin]=useState(true);
-    const [userid,setuserid]=useState("Login");
+ 
+    const{login,setlogin,userid}=useContext(Logincontext)
     const[navi,setnavi]=useState(false);
     const [Overview,setoverview]=useState(true);
     const [scomp,setscomp]=useState(false);
@@ -60,8 +62,8 @@ function App() {
       <label className={`user${user?"":" closed"}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(true)}}>User</label>
       <label className={`admin${user?" closed":""}`} style={{backgroundColor:Color.primary,color:Color.secondary}} onClick={()=>{setuser(false)}}>Admin</label>
     </div>
-    {user?<Login key="user" userdata={setuserid} loginset={setlogin} text="User id" user={user}/>:
-    <Login key="admin" userdata={setuserid} loginset={setlogin} text="Admin id" user={user}/>
+    {user?<Login key="user"   text="User id" user={user}/>:
+    <Login key="admin"   text="Admin id" user={user}/>
     }
     </>
     :
